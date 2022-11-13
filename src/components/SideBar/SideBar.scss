@@ -7,26 +7,30 @@
 .sidebar-container{
     @include flex-base;
     flex-direction: column;
-    height: 100vh;
     width: 283px;
+    height: 100%;
     background: #fff;
     box-shadow: $box-shadow;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     z-index: -1;
     padding-top: 130px;
     align-items: flex-start;
     padding-left: 30px;
+
+    h3{
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 15px
+    }
     
     .sidebar-head{
         @include flex-base;
         gap: 10px;
 
-        p{
-            font-size: 16px;
-            font-weight: 400;
-        }
+        
     }
 
     .dashboard{
@@ -42,7 +46,26 @@
                 opacity: 0.5;
             }
         
+        
+    }
+    .sidebar-link{
+        @include flex-base;
+        gap: 10px;
+        opacity: 0.5;
+        cursor: pointer;
+        margin-bottom: 25px;
+            
     }
 
+    .businesses{
+        margin-top: 10px;
+    }
+
+    .logout{
+        @include flex-base;
+        gap: 10px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
     
 }
