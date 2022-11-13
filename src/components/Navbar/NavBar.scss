@@ -1,0 +1,80 @@
+@import '../../sass/colors';
+@import '../../sass/mixins';
+@import '../../sass/breakpoints';
+@import '../../sass/variables';
+
+
+.nav-container{
+    @include flex-base;
+    height: 100px;
+    background: #fff;
+    width: 100%;
+    max-width: 1440px;
+    box-shadow: $box-shadow;
+    position: fixed;
+    top: 0;
+
+    .nav-logo{
+        height: 30px;
+        margin-left: 3%;
+    }
+
+    .nav-search{
+        height: 40px;
+        width: 400px;
+        margin-left: 10%;
+        position: relative;
+
+
+        input{
+            height: 100%;
+            width: 100%;
+            border-radius: 8px;
+            position: absolute;
+            padding-left: 15px;
+            border: 1px solid $light-color;
+        }
+
+        button{
+            background: $btn-color;
+            border: none;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding: 10px 20px;
+            color: #fff;
+            cursor: pointer;
+            height: 100%;
+            position: absolute;
+            right: 0;
+
+        }
+    }
+
+    .nav-right{
+        @include flex-base;
+        gap: 25px;
+        margin-left: auto;
+        margin-right: 5%;
+
+        a{
+            color: $secondary-color;
+
+        }
+        .profile-img{
+            border-radius: 50%;
+        }
+
+
+
+        .profile-link{
+            @include flex-base;
+            gap: 10px;
+            
+        a{
+        color: $secondary-color;
+        text-decoration: none;
+        }
+
+        }
+    }
+}
