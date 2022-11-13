@@ -1,0 +1,17 @@
+@import '../../sass/colors';
+@import '../../sass/mixins';
+@import '../../sass/breakpoints';
+@import '../../sass/variables';
+@import '../../sass/fonts';
+
+.user-card{
+    @include flex-base;
+    flex-direction: column;
+    width: 240px;
+    height: 160px;
+    background: #fff;
+    box-shadow: $box-shadow;
+    padding-top: 130px;
+    margin-left: 400px;
+
+}
