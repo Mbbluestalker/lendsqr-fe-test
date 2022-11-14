@@ -1,0 +1,136 @@
+@import '../../sass/colors';
+@import '../../sass/mixins';
+@import '../../sass/breakpoints';
+@import '../../sass/variables';
+@import '../../sass/fonts';
+
+
+.user-details-container{
+    height: 640px;
+    width: 100%;
+    max-width: 1037px;
+    background: #fff;
+    box-shadow: $box-shadow;
+    padding: 30px;
+
+    table{
+        border-collapse: collapse;
+        
+
+        th{
+            padding-right: 3.3rem;
+            opacity: 0.6;
+
+        }
+        tr{
+            border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+            padding-left: 45px;
+            p{
+                opacity: 0.6;
+            }
+        
+        }
+
+        tr:last-child{
+            border-bottom:none;
+        }
+
+        td{
+            padding-top: 20px;
+            padding-bottom: 12px;
+        }
+        
+    }
+
+
+
+    .table-head{
+        @include flex-base;
+        margin-bottom: 10px;
+        img{
+            padding-left: 0.7rem;
+        }
+        
+    }
+
+    button{
+        outline: none;
+        background: red;
+        border: none;
+        height: 30px;
+        width: 90px;
+        border-radius: 40px;
+
+    }
+
+    .btn-active{
+        background: rgba($success-color, 0.1);
+        color: $success-color;
+        width: 70px;
+    }
+
+    .btn-danger{
+        background: rgba($danger-color, 0.1);
+        color: $danger-color;
+    }
+
+    .btn-pending{
+        background: rgba($warning-color, 0.1);
+        color: $warning-color;
+        width: 90px;
+    }
+
+    .btn-inactive{
+        background: rgba($text-color, 0.1);
+        color: $text-color;
+        width: 80px;
+    }
+}
+
+
+.pagination{
+    @include flex-base;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1037px;
+    height: 24px;
+    margin-top: 20px;
+    // margin-left: 290px;
+
+    .pagination-left{
+        @include flex-base;
+        justify-content: flex-start;
+              
+
+        .pagination-btn{
+            @include flex-base;
+            justify-content: space-around;
+            width: 80px;
+            height: 30px;
+            background: rgba(33, 63, 125, 0.1);
+            border-radius: 4px;
+            box-shadow: $box-shadow;
+            margin-right: 10px;
+            cursor: pointer;
+            
+        }
+
+
+    }
+
+    .pagination-right{
+        @include flex-base;
+        gap: 20px;
+
+        .arrow-background{
+            @include flex-base;
+            justify-content: space-around;
+            width: 24px;
+            height: 24px;
+            background: rgba(33, 63, 125, 0.1);
+        }
+        
+    }
+
+    
+}
