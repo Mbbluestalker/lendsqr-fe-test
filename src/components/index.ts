@@ -1,3 +1,5 @@
 export * from './Navbar/NavBar'
 export * from './SideBar/SideBar'
 export * from './UserCard/UserCard'
+export * from './UserDetails/UserDetails'
+export * from './FilterCard/FilterCard'

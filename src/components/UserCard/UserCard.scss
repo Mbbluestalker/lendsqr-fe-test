@@ -4,14 +4,36 @@
 @import '../../sass/variables';
 @import '../../sass/fonts';
 
-.user-card{
-    @include flex-base;
-    flex-direction: column;
-    width: 240px;
-    height: 160px;
-    background: #fff;
-    box-shadow: $box-shadow;
-    padding-top: 130px;
-    margin-left: 400px;
 
+.user-card-container{
+    @include flex-base;
+    width: 100%;
+    max-width: 1037px;
+    height: 300px;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .user-card{
+        @include flex-base;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 240px;
+        height: 160px;
+        background: white;
+        box-shadow: $box-shadow;
+        padding: 30px;
+        border-radius: 10px;
+
+        .title{
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .count{
+            font-size: 24px;
+            font-weight: 600;
+        }
+    }
 }
+
+

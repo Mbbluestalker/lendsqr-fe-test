@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.scss'
 import {Routes, Route} from 'react-router-dom'
-import { NavBar, SideBar, UserCard } from './components'
+import { NavBar, SideBar, UserCard, UserDetails } from './components'
 
 function App() {
 
@@ -9,8 +9,9 @@ function App() {
     <div className="App">
       <NavBar />
       
-      <SideBar />
+      {/* <SideBar /> */}
       <UserCard />
+      <UserDetails />
     </div>
   )
 }
