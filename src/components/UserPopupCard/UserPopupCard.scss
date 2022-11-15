@@ -1,0 +1,24 @@
+@import '../../sass/colors';
+@import '../../sass/mixins';
+@import '../../sass/breakpoints';
+@import '../../sass/variables';
+@import '../../sass/fonts';
+
+
+
+.userpopup-container{
+    background: $white;
+    box-shadow: $box-shadow;
+    height: 130px;
+    width:180px;
+    padding: 25px 20px ;
+
+    .userpopup-links{
+        @include flex-base;
+        gap: 10px;
+        margin-bottom: 13%;
+        opacity: 0.7;
+        font-weight: 500;
+        font-size: 14px;
+    }
+}

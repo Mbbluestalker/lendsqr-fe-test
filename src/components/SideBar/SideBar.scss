@@ -4,7 +4,17 @@
 @import '../../sass/variables';
 @import '../../sass/fonts';
 
+
+.sidebar{
+     @include flex-base; 
+     align-items: flex-start;  
+
+     main{
+        width: 100%;
+     }
+}
 .sidebar-container{
+    
     @include flex-base;
     flex-direction: column;
     width: 283px;
