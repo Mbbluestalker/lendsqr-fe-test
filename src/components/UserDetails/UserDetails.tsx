@@ -6,12 +6,13 @@ import ArrowDownIcon from "../../assets/arrowdown2.svg";
 import NextForward from "../../assets/next_forward.svg";
 import NextPrev from "../../assets/next_prev.svg";
 import DottedHorizontal from "../../assets/dotted_horizontal.svg";
+import moment from "moment";
 
 export const UserDetails = ({ users }: any) => {
   return (
     <>
       <div className="user-details-container">
-        <table>
+        <table cellSpacing="0" cellPadding={0}>
           <th>
             <div className="table-head">
               <p>Organization</p>
@@ -24,7 +25,7 @@ export const UserDetails = ({ users }: any) => {
               <img src={FilterIcon} alt="" />
             </div>
           </th>
-          <th>
+          <th className="email">
             <div className="table-head">
               <p>Email</p>
               <img src={FilterIcon} alt="" />
@@ -32,7 +33,7 @@ export const UserDetails = ({ users }: any) => {
           </th>
           <th>
             <div className="table-head">
-              <p>Phone Number</p>
+              <p>PhoneNumber</p>
               <img src={FilterIcon} alt="" />
             </div>
           </th>
@@ -50,7 +51,7 @@ export const UserDetails = ({ users }: any) => {
           </th>
 
           {users.map((user: any) => {
-            const { id, orgName, userName, email, phoneNumber, createdAt , status } =
+            const { id, orgName, userName, email, phoneNumber, createdAt } =
               user;
             return (
               <tr key={id}>
@@ -61,16 +62,19 @@ export const UserDetails = ({ users }: any) => {
                   <p>{userName}</p>
                 </td>
                 <td>
-                  <p>{email}</p>
+                  <div className="email-data">
+                    <p>{email}</p>
+                  </div>
                 </td>
                 <td>
-                  <p>{phoneNumber}</p>
+                  <p>{phoneNumber.slice(0, 14)}</p>
                 </td>
                 <td>
-                  <p>{createdAt}</p>
+                  <p>{moment(createdAt).format("LLL")} </p>
+                  {/* <p>{createdAt}</p> */}
                 </td>
                 <td>
-                  <button className="btn-active">{status}</button>
+                  <button className={"btn-danger"}>Blacklisted</button>
                 </td>
                 <td>
                   <img src={DottedIcon} alt="" />
@@ -84,7 +88,7 @@ export const UserDetails = ({ users }: any) => {
         <div className="pagination-left">
           <p>Showing</p>
           <div className="pagination-btn">
-            <p>100</p>
+            <p>{users.length}</p>
             <img src={ArrowDownIcon} alt="" />
           </div>
           <p>out of 100</p>

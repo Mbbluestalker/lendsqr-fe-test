@@ -8,9 +8,23 @@
 .sidebar{
      @include flex-base; 
      align-items: flex-start;  
+     height: 100vh;
+    //  gap: 70px;
+    top: 0;
+    // left: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: -1;
+
+
 
      main{
         width: 100%;
+        height: 100%;
+        padding-top: 150px;
+        padding-left: 50px;
+        overflow: auto;
+
      }
 }
 .sidebar-container{
@@ -21,13 +35,11 @@
     height: 100%;
     background: #fff;
     box-shadow: $box-shadow;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    overflow-y: scroll;
     padding-top: 130px;
     align-items: flex-start;
     padding-left: 30px;
+
 
     h3{
         font-size: 12px;

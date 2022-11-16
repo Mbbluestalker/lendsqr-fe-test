@@ -19,7 +19,8 @@ export const Users = () => {
 
   return (
     <div>
-      <UserCard />
+      <h1>Users</h1>
+      <UserCard users={users} />
       <UserDetails users={users} />
     </div>
   );

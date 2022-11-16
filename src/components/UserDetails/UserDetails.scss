@@ -18,15 +18,18 @@
         
 
         th{
-            padding-right: 3.3rem;
+            // padding-right: 3.3rem;
             opacity: 0.6;
+            
 
         }
         tr{
             border-bottom: 1px solid rgba(33, 63, 125, 0.1);
-            padding-left: 45px;
+            // padding-left: 45px;
             p{
                 opacity: 0.6;
+                font-size: 14px;
+                font-weight: 400;
             }
         
         }
@@ -37,7 +40,15 @@
 
         td{
             padding-top: 20px;
-            padding-bottom: 12px;
+            padding-bottom: 10px;
+            margin: 0;
+            
+            button{
+                margin-right: 40px;
+                margin-left: 10px;
+            }
+           
+    
         }
         
     }
@@ -48,14 +59,19 @@
         @include flex-base;
         margin-bottom: 10px;
         img{
-            padding-left: 0.7rem;
+            padding-left: 0.5rem;
+        }
+        p{
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
         }
         
     }
 
+
     button{
         outline: none;
-        background: red;
         border: none;
         height: 30px;
         width: 90px;
